@@ -1,434 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Arjun Monga | Space Hardware Verification & AIT Consulting</title>
-  <meta name="description" content="Arjun Monga — Space hardware verification, AIT leadership, and environmental test consulting (TVAC, vibration, shock, EMC). Kiruna, Sweden." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arjun Monga | Space Systems AIT Consultant</title>
 
-  <style>
-    :root{
-      --bg:#0b1220;
-      --panel:#0f1a2e;
-      --card:#111f36;
-      --card2:#0f1a2e;
-      --text:#e8eefc;
-      --muted:#b7c3e3;
-      --line:rgba(255,255,255,0.10);
-      --link:#8fb3ff;
-      --accent:#9ad0ff;
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-      --radius:18px;
-      --max: 1040px;
-    }
+<style>
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background:
-        radial-gradient(1200px 700px at 20% -10%, rgba(122,179,255,0.30), transparent 60%),
-        radial-gradient(900px 600px at 90% 0%, rgba(154,208,255,0.18), transparent 55%),
-        radial-gradient(800px 500px at 50% 110%, rgba(129,140,248,0.10), transparent 50%),
-        var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
+    margin: 0;
+    background: #f7f9fc;
+    color: #1a1a1a;
+}
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 48px 22px 70px;
-    }
+.container {
+    max-width: 820px;
+    margin: auto;
+    padding: 60px 30px;
+}
 
-    /* top bar */
-    .topbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      gap:14px;
-      flex-wrap:wrap;
-      margin-bottom:18px;
-    }
-    .brand{
-      font-weight:700;
-      letter-spacing:-0.01em;
-      font-size:14px;
-      color: var(--muted);
-    }
-    .nav{
-      display:flex;
-      gap:14px;
-      flex-wrap:wrap;
-      font-size:14px;
-    }
-    .nav a{
-      color: var(--muted);
-      text-decoration:none;
-      padding:8px 10px;
-      border:1px solid transparent;
-      border-radius:999px;
-    }
-    .nav a:hover{
-      border-color: var(--line);
-      color: var(--text);
-      background: rgba(255,255,255,0.03);
-    }
+h1 {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
 
-    /* hero */
-    .hero{
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 30px 28px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::after{
-      content:"";
-      position:absolute;
-      inset:-30%;
-      background: radial-gradient(closest-side, rgba(143,179,255,0.18), transparent 70%);
-      transform: translate(35%, -10%);
-      pointer-events:none;
-    }
-    .heroInner{
-      position:relative;
-      z-index:1;
-    }
+.subtitle {
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 35px;
+}
 
-    h1{
-      margin:0 0 6px 0;
-      font-size:40px;
-      letter-spacing:-0.03em;
-      line-height:1.15;
-    }
-    .subtitle{
-      margin:0 0 14px 0;
-      color: var(--muted);
-      font-size:16px;
-    }
-    .headline{
-      margin:0;
-      font-size:16px;
-      color: var(--text);
-      max-width: 74ch;
-    }
-    .headline b{ color: var(--accent); font-weight:700; }
+.section {
+    margin-top: 45px;
+}
 
-    .ctaRow{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      margin-top:18px;
-      align-items:center;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 14px;
-      border-radius: 999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,0.04);
-      color: var(--text);
-      text-decoration:none;
-      font-weight:600;
-      font-size:14px;
-    }
-    .btn:hover{
-      background: rgba(255,255,255,0.08);
-      border-color: rgba(255,255,255,0.18);
-    }
-    .btnPrimary{
-      background: linear-gradient(180deg, rgba(143,179,255,0.28), rgba(143,179,255,0.12));
-      border-color: rgba(143,179,255,0.25);
-    }
-    .btnPrimary:hover{
-      background: linear-gradient(180deg, rgba(143,179,255,0.36), rgba(143,179,255,0.16));
-    }
+h2 {
+    font-size: 20px;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 6px;
+    margin-bottom: 18px;
+}
 
-    .pillrow{
-      margin-top:18px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-    .pill{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,0.03);
-      color: var(--muted);
-      padding:8px 10px;
-      border-radius:999px;
-      font-size:13px;
-      white-space:nowrap;
-    }
+ul {
+    padding-left: 18px;
+}
 
-    /* layout */
-    .grid{
-      margin-top: 18px;
-      display:grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 16px;
-    }
-    @media (max-width: 900px){
-      h1{font-size:34px}
-      .grid{grid-template-columns: 1fr}
-    }
+li {
+    margin-bottom: 8px;
+}
 
-    .card{
-      background: rgba(255,255,255,0.04);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 22px 22px;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.20);
-    }
-    h2{
-      margin:0 0 12px 0;
-      font-size:18px;
-      letter-spacing:-0.01em;
-    }
-    p{margin:0 0 10px 0}
-    ul{margin:0; padding-left: 18px}
-    li{margin:7px 0; color: var(--muted)}
-    li b{color: var(--text)}
+.contact {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+}
 
-    .cards2{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 12px;
-    }
-    @media (max-width: 680px){
-      .cards2{grid-template-columns: 1fr}
-    }
-    .svc{
-      padding:14px 14px;
-      border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(0,0,0,0.10);
-    }
-    .svc .t{font-weight:700; color: var(--text); margin-bottom:4px}
-    .svc .d{color: var(--muted); font-size:14px; margin:0}
+a {
+    color: #1f4ed8;
+    text-decoration: none;
+}
 
-    a{color: var(--link); text-decoration:none}
-    a:hover{text-decoration:underline}
+a:hover {
+    text-decoration: underline;
+}
 
-    .xp{
-      display:flex;
-      flex-direction:column;
-      gap: 14px;
-    }
-    .role{
-      padding-top: 12px;
-      border-top: 1px solid var(--line);
-    }
-    .role:first-child{border-top:none; padding-top:0}
-    .roleTop{
-      display:flex;
-      justify-content:space-between;
-      gap: 12px;
-      flex-wrap:wrap;
-      margin-bottom: 4px;
-    }
-    .roleTitle{font-weight:800}
-    .roleWhere{color: var(--muted)}
-    .roleWhen{color: var(--muted); font-size:13px}
+footer {
+    margin-top: 60px;
+    font-size: 13px;
+    color: #6b7280;
+}
 
-    .contactLine{
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px 18px;
-      margin:0;
-      padding:0;
-      list-style:none;
-      color: var(--muted);
-    }
-
-    footer{
-      margin-top: 22px;
-      text-align:center;
-      color: var(--muted);
-      font-size:12px;
-    }
-  </style>
+</style>
 </head>
 
 <body>
-  <div class="wrap">
 
-    <div class="topbar">
-      <div class="brand">arjunmonga.com</div>
-      <div class="nav">
-        <a href="#services">Services</a>
-        <a href="#projects">Selected Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
+<div class="container">
 
-    <section class="hero">
-      <div class="heroInner">
-        <h1>Arjun Monga</h1>
-        <p class="subtitle">Space Hardware Verification • AIT Leadership • Environmental Testing</p>
-        <p class="headline">
-          I help space hardware teams move from prototype to <b>qualified flight-ready hardware</b> by building robust AIT workflows,
-          planning and executing test campaigns, and solving integration problems fast.
-        </p>
+<h1>Arjun Monga</h1>
+<div class="subtitle">
+Space Systems Integration & AIT Consultant
+</div>
 
-        <div class="ctaRow">
-          <a class="btn btnPrimary" href="mailto:arjun@arjunmonga.com">arjun@arjunmonga.com</a>
-          <a class="btn" href="https://www.linkedin.com/in/mongaarjun/" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="#contact">Availability</a>
-        </div>
+<p>
+Independent engineering consultant specializing in spacecraft hardware
+Assembly, Integration and Test (AIT), system integration, environmental
+testing preparation, and technical troubleshooting.
+</p>
 
-        <div class="pillrow">
-          <div class="pill">TVAC • thermal cycling</div>
-          <div class="pill">Vibration • shock</div>
-          <div class="pill">EMC readiness (MIL-STD-461)</div>
-          <div class="pill">Test plans • procedures • records</div>
-          <div class="pill">Troubleshooting • RCA • NCR handling</div>
-        </div>
-      </div>
-    </section>
+<div class="section">
+<h2>Services</h2>
+<ul>
+<li>Spacecraft Assembly, Integration & Test (AIT)</li>
+<li>Hardware integration and flight system validation</li>
+<li>Environmental test preparation (thermal vacuum, vibration, EMC)</li>
+<li>Integration troubleshooting and root-cause analysis</li>
+<li>Engineering process and verification workflow development</li>
+</ul>
+</div>
 
-    <section class="grid">
+<div class="section">
+<h2>Background</h2>
+<p>
+Experience working with complex aerospace hardware systems including
+precision assemblies, sensors, electronics integration, and
+environmental qualification. Based in Kiruna, Sweden.
+</p>
+</div>
 
-      <div class="card" id="services">
-        <h2>Services</h2>
-        <p style="color:var(--muted); margin-bottom:12px;">
-          Consulting engagements structured as fixed-term deliverables (e.g., “AIT framework + first campaign readiness”) or ongoing program support.
-        </p>
+<div class="section">
+<h2>Availability</h2>
+<p>
+Consulting engagements supporting early-stage hardware development,
+AIT process design, and integration support for space systems programs.
+</p>
+</div>
 
-        <div class="cards2">
-          <div class="svc">
-            <div class="t">AIT framework setup</div>
-            <p class="d">Work instructions, acceptance criteria, checklists, build flow, and test records.</p>
-          </div>
-          <div class="svc">
-            <div class="t">Environmental test campaigns</div>
-            <p class="d">Planning + execution support: TVAC/thermal, vibration, shock; external lab coordination.</p>
-          </div>
-          <div class="svc">
-            <div class="t">Verification planning</div>
-            <p class="d">Test plans, verification matrices, requirement-to-test traceability, readiness reviews.</p>
-          </div>
-          <div class="svc">
-            <div class="t">Troubleshooting & RCA</div>
-            <p class="d">Fast isolation, root-cause analysis, corrective actions, and closure with evidence.</p>
-          </div>
-        </div>
+<div class="contact">
+<h2>Contact</h2>
+<p>
+Email: <a href="mailto:arjun@arjunmonga.com">arjun@arjunmonga.com</a><br>
+Location: Kiruna, Sweden
+</p>
+</div>
 
-        <p style="color:var(--muted); margin-top:14px;">
-          Typical clients: space startups, payload developers, subsystem suppliers, and research institutions.
-        </p>
-      </div>
+<footer>
+© 2026 Arjun Monga
+</footer>
 
-      <div class="card">
-        <h2>Core capabilities</h2>
-        <ul>
-          <li><b>AIT leadership:</b> integration planning, test execution, readiness reviews.</li>
-          <li><b>Test operations:</b> rigs/fixtures, instrumentation, efficient lab workflows.</li>
-          <li><b>Quality interface:</b> evidence-based acceptance and nonconformity handling.</li>
-          <li><b>Tools:</b> Python • C/C++ • NI LabVIEW • Inventor/Fusion 360 • Ansys Fluent/CFX.</li>
-        </ul>
+</div>
 
-        <h2 style="margin-top:16px;">Location</h2>
-        <p class="muted" style="margin:0;">
-          Kiruna, Sweden — available for on-site work in northern Sweden and remote collaboration.
-        </p>
-      </div>
-
-    </section>
-
-    <section class="card" id="projects" style="margin-top:16px;">
-      <h2>Selected projects</h2>
-      <ul>
-        <li><b>Flight instrument AIT & PA/QA management:</b> led TVAC and vibration test campaigns for flight hardware programs.</li>
-        <li><b>Space product development:</b> concept-to-delivery in under 15 months with extensive environmental and EMC testing.</li>
-        <li><b>Launch campaign experience:</b> sounding rocket payload development and campaign execution at Esrange.</li>
-        <li><b>Analysis & validation:</b> CFD work correlated against experimental results to inform design decisions.</li>
-      </ul>
-      <p class="muted" style="margin-top:10px;">
-        Full project details available on request (respecting client confidentiality).
-      </p>
-    </section>
-
-    <section class="card" id="experience" style="margin-top:16px;">
-      <h2>Experience (summary)</h2>
-
-      <div class="xp">
-        <div class="role">
-          <div class="roleTop">
-            <div>
-              <div class="roleTitle">Research Engineer</div>
-              <div class="roleWhere">Institutet för rymdfysik (IRF), Kiruna</div>
-            </div>
-            <div class="roleWhen">Apr 2025 – Present</div>
-          </div>
-          <ul>
-            <li>Experiment management and flight hardware AIT responsibilities across multiple space programs.</li>
-          </ul>
-        </div>
-
-        <div class="role">
-          <div class="roleTop">
-            <div>
-              <div class="roleTitle">Space Technology Development Engineer</div>
-              <div class="roleWhere">Hydromars AB, Stockholm</div>
-            </div>
-            <div class="roleWhen">Jan 2023 – Jan 2025</div>
-          </div>
-          <ul>
-            <li>Planned/executed environmental and EMC test activities; delivered a space product on an aggressive timeline.</li>
-          </ul>
-        </div>
-
-        <div class="role">
-          <div class="roleTop">
-            <div>
-              <div class="roleTitle">Research Assistant</div>
-              <div class="roleWhere">KTH Royal Institute of Technology, Stockholm</div>
-            </div>
-            <div class="roleWhen">Oct 2022 – Jan 2023</div>
-          </div>
-          <ul>
-            <li>CFD analysis on aircraft engine concept and correlation with experimental data.</li>
-          </ul>
-        </div>
-
-        <div class="role">
-          <div class="roleTop">
-            <div>
-              <div class="roleTitle">AIT Engineer / Subsystem Lead (Launch Campaign)</div>
-              <div class="roleWhere">REXUS sounding rocket program</div>
-            </div>
-            <div class="roleWhen">Sep 2020 – Apr 2023</div>
-          </div>
-          <ul>
-            <li>Developed and tested payload mechanism and supported launch campaign execution at Esrange.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section class="card" id="contact" style="margin-top:16px;">
-      <h2>Contact & availability</h2>
-      <ul class="contactLine">
-        <li><b>Email:</b> <a href="mailto:arjun@arjunmonga.com">arjun@arjunmonga.com</a></li>
-        <li><b>LinkedIn:</b> <a href="https://www.linkedin.com/in/mongaarjun/" target="_blank" rel="noopener">linkedin.com/in/mongaarjun</a></li>
-        <li><b>Location:</b> Kiruna, Sweden</li>
-      </ul>
-
-      <p class="muted" style="margin-top:12px; margin-bottom:0;">
-        Available for structured part-time engagements (e.g., 1 day/week) with increased availability during time-critical integration or test campaigns.
-      </p>
-    </section>
-
-    <footer>© 2026 Arjun Monga</footer>
-
-  </div>
 </body>
 </html>
