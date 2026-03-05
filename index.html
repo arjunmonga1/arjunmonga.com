@@ -1,150 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Arjun Monga | Space Systems AIT Consultant</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arjun Monga | Space Systems AIT Consultant</title>
+  <style>
+    :root{
+      --bg: #f7f9fc;
+      --text: #111827;
+      --muted: #4b5563;
+      --border: #e5e7eb;
+      --link: #1f4ed8;
+      --card: #ffffff;
+    }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-    margin: 0;
-    background: #f7f9fc;
-    color: #1a1a1a;
-}
+    * { box-sizing: border-box; }
 
-.container {
-    max-width: 820px;
-    margin: auto;
-    padding: 60px 30px;
-}
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 5px;
-}
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
 
-.subtitle {
-    font-size: 18px;
-    color: #4b5563;
-    margin-bottom: 35px;
-}
+    header {
+      margin-bottom: 26px;
+    }
 
-.section {
-    margin-top: 45px;
-}
+    h1 {
+      font-size: 42px;
+      margin: 0 0 6px 0;
+      letter-spacing: -0.4px;
+    }
 
-h2 {
-    font-size: 20px;
-    border-bottom: 2px solid #e5e7eb;
-    padding-bottom: 6px;
-    margin-bottom: 18px;
-}
+    .subtitle {
+      font-size: 18px;
+      color: var(--muted);
+      margin: 0 0 14px 0;
+    }
 
-ul {
-    padding-left: 18px;
-}
+    .toplinks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      font-size: 14px;
+      margin: 0 0 18px 0;
+      color: var(--muted);
+    }
 
-li {
-    margin-bottom: 8px;
-}
+    .toplinks a {
+      color: var(--link);
+      text-decoration: none;
+    }
 
-.contact {
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid #e5e7eb;
-}
+    .toplinks a:hover {
+      text-decoration: underline;
+    }
 
-a {
-    color: #1f4ed8;
-    text-decoration: none;
-}
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 18px;
+      margin-top: 16px;
+    }
 
-a:hover {
-    text-decoration: underline;
-}
+    .hero p {
+      margin: 0;
+      color: var(--text);
+      font-size: 16px;
+    }
 
-footer {
-    margin-top: 60px;
-    font-size: 13px;
-    color: #6b7280;
-}
+    .section {
+      margin-top: 46px;
+    }
 
-</style>
+    h2 {
+      font-size: 18px;
+      margin: 0 0 14px 0;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border);
+      letter-spacing: -0.2px;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+
+    .bullets-muted li {
+      color: var(--text);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 16px;
+    }
+
+    .card h3 {
+      font-size: 14px;
+      margin: 0 0 8px 0;
+      color: var(--muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .contact {
+      margin-top: 52px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
+    }
+
+    .contact p {
+      margin: 0;
+      color: var(--text);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 56px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    /* Optional: slightly improve scanning on larger screens without changing "simple" feel */
+    @media (min-width: 860px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
+    <header>
+      <h1>Arjun Monga</h1>
+      <div class="subtitle">Space Systems Integration & AIT Consultant</div>
 
-<div class="container">
+      <!-- Top links (credibility + conversion) -->
+      <div class="toplinks">
+        <span><a href="https://linkedin.com/in/YOURPROFILE" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+        <span>•</span>
+        <span><a href="Arjun_Monga_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a></span>
+        <span>•</span>
+        <span><a href="mailto:arjmon@gmail.com">arjmon@gmail.com</a></span>
+        <span>•</span>
+        <span>Kiruna, Sweden</span>
+      </div>
 
-<h1>Arjun Monga</h1>
+      <!-- "5k landing page" idea (simple version): a single crisp value proposition + outcomes -->
+      <div class="hero">
+        <p>
+          Independent engineer supporting spacecraft payload Assembly, Integration and Test (AIT),
+          environmental qualification campaigns, and integration troubleshooting to help teams move
+          from hardware readiness to validated flight systems.
+        </p>
+      </div>
+    </header>
 
-<div class="subtitle">
-Space Systems Engineering and AIT Consultant | Project Manager
-</div>
+    <div class="section">
+      <h2>Services</h2>
+      <ul class="bullets-muted">
+        <li>Spacecraft and payload Assembly, Integration & Test (AIT)</li>
+        <li>Hardware integration planning, execution, and flight system validation</li>
+        <li>Environmental test preparation and execution support (vibration, shock, thermal vacuum, EMC)</li>
+        <li>Integration troubleshooting and root-cause analysis</li>
+        <li>Verification workflow and engineering process development</li>
+      </ul>
+    </div>
 
-<p>
-<a href="https://linkedin.com/in/" target="_blank">LinkedIn</a> |
-<a href="Arjun Monga CV.pdf" target="_blank">CV</a>
-</p>
+    <div class="section">
+      <h2>Selected experience</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>AIT & Integration</h3>
+          <p>
+            Payload and subsystem integration for precision space hardware, including
+            alignment-critical assemblies and flight harnessing, with structured integration
+            procedures and verification steps.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Environmental qualification</h3>
+          <p>
+            Support for qualification test campaigns across vibration, shock, thermal vacuum and EMC,
+            including preparation, execution, anomaly handling, and test readiness deliverables.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Troubleshooting</h3>
+          <p>
+            Rapid triage and root-cause analysis during integration and test, with documentation,
+            corrective actions, and verification closure for recurring integration issues.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Systems-facing workflow</h3>
+          <p>
+            Interface and verification workflow setup that improves team throughput during AIT:
+            checklists, configuration control practices, and evidence-driven verification planning.
+          </p>
+        </div>
+      </div>
+    </div>
 
-<br>
+    <div class="section">
+      <h2>Background</h2>
+      <p>
+        Experience working with complex space hardware systems including particle instrumentation,
+        membrane-based water regeneration systems, and other precision space-grade assemblies.
+        Have supported payload hardware through vibration, shock, thermal vacuum and EMC qualification.
+      </p>
+      <p>
+        M.Sc. in Space Engineering, Kungliga Tekniska Högskolan (KTH), 2022.<br />
+        Based in Kiruna, Sweden.
+      </p>
+    </div>
 
-<p>
-Independent engineering consultant specializing in payload hardware
-Assembly, Integration and Test (AIT), system integration, environmental
-qualification testing, and technical troubleshooting.
-</p>
+    <div class="section">
+      <h2>Availability</h2>
+      <p>
+        Consulting engagements supporting early-stage hardware development, AIT process design,
+        integration support, and qualification test campaigns.
+      </p>
+      <p>
+        Remote support with onsite visits as needed.
+      </p>
+    </div>
 
-<div class="section">
-<h2>Services</h2>
-<ul>
-<li>Spacecraft Assembly, Integration & Test (AIT)</li>
-<li>Hardware integration and flight system validation</li>
-<li>Environmental test preparation (thermal vacuum, vibration, EMC)</li>
-<li>Integration troubleshooting and root-cause analysis</li>
-<li>Engineering process and verification workflow development</li>
-</ul>
-</div>
+    <!-- "5k landing page" idea (simple, no extra visuals): make contact frictionless + define next step -->
+    <div class="section">
+      <h2>How engagements typically start</h2>
+      <ul>
+        <li>Short scoping call: objectives, current hardware status, schedule risks</li>
+        <li>Proposed plan: integration/test approach, deliverables, and time estimate</li>
+        <li>Execution: remote support, onsite visits, and weekly progress tracking</li>
+      </ul>
+    </div>
 
-<div class="section">
-<h2>Background</h2>
-<p>
-Experience working with complex space hardware systems including
-particle instrumentation, membrane-based water regeneration systems and other precision space-grade assemblies. 
-Have led multiple payloads through vibration, shock, thermal vacuum and EMC environmental qualification.
-</p>
-<p>
-Master's of Science degree in Space Engineering from Kungliga Tekniska Högskolan (2022).<br>
-Based in Kiruna, Sweden.
-</p>
-</div>
+    <div class="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:arjmon@gmail.com">arjmon@gmail.com</a><br />
+        LinkedIn: <a href="https://linkedin.com/in/YOURPROFILE" target="_blank" rel="noopener noreferrer">linkedin.com/in/YOURPROFILE</a><br />
+        Phone: +46 (0) 727 780 171<br />
+        Location: Kiruna, Sweden
+      </p>
+    </div>
 
-<div class="section">
-<h2>Availability</h2>
-<p>
-Consulting engagements supporting early-stage hardware development,
-AIT process design, integration support, and qualification test campaigns.
-</p>
-<p>
-Primarily supporting remote work with onsite visits as needed.
-</p>
-</div>
-
-<div class="contact">
-<h2>Contact</h2>
-<p>
-Email: <a href="mailto:arjmon@gmail.com">arjmon@gmail.com</a><br>
-Phone: +46 (0) 727 780 171<br>
-Location: Kiruna, Sweden
-</p>
-</div>
-
-<footer>
-© 2026 Arjun Monga
-</footer>
-
-</div>
-
+    <footer>© 2026 Arjun Monga</footer>
+  </div>
 </body>
 </html>
