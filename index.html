@@ -277,13 +277,12 @@
       <div class="eyebrow">Space Systems Consulting</div>
       <h1>Arjun Monga</h1>
       <div class="subtitle">Space Systems Integration & AIT Consultant</div>
-
       <div class="toplinks">
         <a href="https://linkedin.com/in/mongaarjun" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <span class="sep">·</span>
         <a href="Arjun Monga CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
         <span class="sep">·</span>
-        <a href="/cdn-cgi/l/email-protection#fd9c8f97909293bd9a909c9491d39e9290"><span class="__cf_email__" data-cfemail="e687948c8b8988a6818b878f8ac885898b">[email&#160;protected]</span></a>
+        <a href="mailto:arjmon@gmail.com">arjmon@gmail.com</a>
         <span class="sep">·</span>
         <span>Kiruna, Sweden</span>
       </div>
@@ -340,7 +339,7 @@
       <div class="contact-grid">
         <div class="contact-row">
           <span class="contact-label">Email</span>
-          <a href="/cdn-cgi/l/email-protection#68091a02050706280f05090104460b0705"><span class="__cf_email__" data-cfemail="ff9e8d95929091bf98929e9693d19c9092">[email&#160;protected]</span></a>
+          <a href="mailto:arjmon@gmail.com">arjmon@gmail.com</a>
         </div>
         <div class="contact-row">
           <span class="contact-label">LinkedIn</span>
@@ -360,8 +359,24 @@
     <footer>© 2026 Arjun Monga</footer>
   </div>
 
-  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  <script>
     var btn = document.getElementById('themeToggle');
     var root = document.documentElement;
 
-    function isLight() { return
+    function isLight() { return root.classList.contains('light'); }
+
+    function updateLabel() {
+      btn.textContent = isLight() ? '☽ Dark' : '○ Light';
+    }
+
+    btn.addEventListener('click', function () {
+      root.classList.toggle('light');
+      localStorage.setItem('theme', isLight() ? 'light' : 'dark');
+      updateLabel();
+    });
+
+    updateLabel();
+  </script>
+
+</body>
+</html>
