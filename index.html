@@ -249,6 +249,26 @@
       .contact-grid { grid-template-columns: 1fr; }
       .theme-toggle { top: 14px; right: 14px; padding: 6px 10px; font-size: 10px; }
     }
+
+    .gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin-top: 6px;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+  object-fit: cover;
+}
+
+@media (min-width: 700px) {
+  .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
   </style>
 
   <script>
@@ -324,6 +344,15 @@
         <li>Execution: remote support, onsite visits, and weekly progress tracking</li>
       </ul>
     </div>
+
+    <div class="section">
+  <h2>Gallery</h2>
+  <div class="gallery">
+    <img src="Website_picture_1.webp" alt="Filing rough edges on aluminium plate">
+    <img src="Website_picture_4.jpeg" alt="Payload ready for shock test">
+    <img src="Website_picture_6.jpeg" alt="Payload ready for resonance search">
+  </div>
+</div>
 
     <div class="contact">
       <h2>Contact</h2>
