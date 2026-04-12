@@ -250,23 +250,31 @@
       .theme-toggle { top: 14px; right: 14px; padding: 6px 10px; font-size: 10px; }
     }
 
-    .gallery {
+.gallery {
   display: grid;
   grid-template-columns: 1fr;
   gap: 14px;
   margin-top: 6px;
 }
 
-.gallery img {
+.gallery-item img {
   width: 100%;
+  height: auto;
   display: block;
   border: 1px solid var(--border);
-  object-fit: cover;
+}
+
+.gallery-item.wide {
+  grid-column: span 1;
 }
 
 @media (min-width: 700px) {
   .gallery {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-item.wide {
+    grid-column: span 2;
   }
 }
   </style>
@@ -347,10 +355,19 @@
 
     <div class="section">
   <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="Website_picture_1.webp" alt="Filing rough edges on aluminium plate">
-    <img src="Website_picture_6.jpeg" alt="Payload ready for resonance search">
-    <img src="Website_picture_8.webp" alt="Flight model fit check before integration with spacecraft">
+<div class="gallery">
+  <div class="gallery-item">
+    <img src="Website_picture_1.webp" alt="">
+  </div>
+
+  <div class="gallery-item">
+    <img src="Website_picture_5.webp" alt="">
+  </div>
+
+  <div class="gallery-item wide">
+    <img src="Website_picture_8.webp" alt="">
+  </div>
+</div>
 
   
   </div>
